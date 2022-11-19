@@ -1,0 +1,114 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<noscript>
+  <h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2>
+</noscript>
+<div id="main-content" class="container">
+  <!-- <div class="row">
+    <div class="col-md-6">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="connect">WebSocket connection:</label>
+          <button (click)="connect()" class="btn btn-primary" type="submit">Connect</button>
+          <button (click)="disconnect()" class="btn btn-danger" type="submit" disabled="disabled">Disconnect
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="name">What is your name?</label>
+          <input type="text" [(ngModel)]="name" class="form-control" name="name"> <br>
+        </div>
+        <div class="form-group">
+          <label for="name">What is your message?</label>
+          <input type="text" [(ngModel)]="message" class="form-control" name="message"> <br>
+        </div>
+        <button (click)="sendMessage()" class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <div>{{greeting | json}}</div>
+  <div>{{webSocketAPI.message[0]?.name}}</div> -->
+  <!-- <div>{{webSocketAPI.message | json}}</div> -->
+  <br/>
+  <!-- <div class="container">
+    <button type="button" class="btn btn-primary position-relative">
+      Inbox
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        {{webSocketAPI.message.length}}
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+    <table class="table table-striped">
+      <thead>
+        <th>Name</th>
+        <th>Message</th>
+        <th>Date Time</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let msg of webSocketAPI.message; let i=index">
+          <td>{{i+1}} - {{webSocketAPI.message[i].name}}</td>
+          <td>{{i+1}} - {{webSocketAPI.message[i].message}}</td>
+          <td>{{i+1}} - {{webSocketAPI.message[i].dateTime}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+  <app-chat></app-chat>
+</div>
+
+
+<!-- <h2>mat-table paginator</h2>
+
+<table mat-table [dataSource]="dataSourceWithPageSize" class="mat-elevation-z8">
+  <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+    <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+    <td mat-cell *matCellDef="let emp">{{ emp[column] }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let emprow; columns: displayedColumns"></tr>
+</table>
+<mat-paginator #paginatorPageSize [pageSizeOptions]="pageSizes" showFirstLastButtons></mat-paginator> -->
+
+<!-- <table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Message</th>
+			<th scope="col">Date Time</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let msg of webSocketAPI.message">
+			<th scope="row">{{ msg.dateTime }}</th>
+			<td>
+				{{ msg.name }}
+			</td>
+			<td>{{ msg.message}}</td>
+			<td>{{ msg.dateTime}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+	<ngb-pagination
+		[collectionSize]="collectionSize"
+    [page]="page"
+		[pageSize]="pageSize"
+		(pageChange)="refreshCountries()"
+	>
+	</ngb-pagination>
+
+	<select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
+		<option [ngValue]="10">10 items per page</option>
+		<option [ngValue]="20">20 items per page</option>
+		<option [ngValue]="30">30 items per page</option>
+	</select>
+</div>
+<router-outlet></router-outlet> -->
